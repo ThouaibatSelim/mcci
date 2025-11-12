@@ -1,0 +1,56 @@
+body{
+    background: #002349;
+    font-family: Didact Gothic;
+}
+
+/* Header sticky */
+.header {
+  position: sticky;    /* reste collé en haut quand on scroll */
+  top: 0;              /* distance par rapport au haut */
+  background: #002349;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  z-index: 1000;       /* pour qu’il soit au-dessus du contenu */
+}
+
+/* Contenu juste pour le scroll */
+.content {
+  height: 1500px;      /* simule beaucoup de contenu */
+  padding: 20px;
+  background: #f5f5f5;
+}
+
+p{
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.content img {
+  width: 100%;          /* s’adapte à la largeur du contenu */
+  max-width: 500px;     /* taille max pour ne pas dépasser */
+  height: auto;         /* garde les proportions */
+  display: block;
+  margin: 20px auto;    /* centre l'image et ajoute un espace vertical */
+}
+
+
+/* Bouton fixe */
+.fixed-btn {
+  position: fixed;     /* reste toujours visible, même au scroll */
+  bottom: 20px;        /* distance depuis le bas de la fenêtre */
+  right: 20px;         /* distance depuis la droite */
+  padding: 10px 20px;
+  background: #957C3D;
+  color: white;
+  font-family: Didact Gothic;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.fixed-btn:active{
+    transform: scale(0.9); /* effet click */
+  }

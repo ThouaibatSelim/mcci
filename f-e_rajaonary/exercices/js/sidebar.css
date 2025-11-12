@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  font-family: Outfit;
+}
+
+/* Le menu */
+#sidebar {
+  width: 200px;
+  background: #ddd;
+  padding: 20px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 3px 0 5px rgba(0,0,0,0.2);
+}
+
+/* Quand il est caché → on le déplace complètement à gauche */
+#sidebar.hidden {
+  transform: translateX(-100%);
+}
+
+#toggle-btn {
+  position: absolute;
+  left: 200px; /* aligné à la droite du menu ouvert */
+  top: 20px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: left 0.3s ease;
+}
+
+#sidebar.hidden + #toggle-btn {
+  left: 0; /* Quand le menu est caché, le bouton revient à gauche */
+}
+
+
+/* Zone principale */
+#main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  transition: margin-left 0.3s ease;
+  margin-left: 200px; /* Quand le menu est ouvert */
+}
+
+/* Quand le menu est caché */
+#main.full {
+  margin-left: 0;
+}

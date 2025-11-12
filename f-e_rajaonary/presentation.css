@@ -1,0 +1,34 @@
+/* body */
+body{
+    background-color:  #242582;
+    color:#f1f1f1 ;
+    font-family: Outfit;
+
+}
+
+h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+p{
+    text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+  height: auto;
+}
+
+.texte-centre {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%; /* ou moins si tu veux un bloc plus étroit */
+  padding: 20px; /* pour aérer un peu le texte */
+  border-radius: 10px; /* pour des coins arrondis, si tu veux */
+}
+

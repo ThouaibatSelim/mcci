@@ -1,0 +1,103 @@
+/* Import de la font */
+@font-face {
+  font-family: 'Agraham';
+  src: url('fonts/agraham/Agraham.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Body : fond + centrage vertical et horizontal */
+body {
+  font-family: 'Agraham', sans-serif;  /* applique la font */
+  background: #E9F1FA;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Conteneur central pour tout centrer */
+.container {
+  display: flex;
+  flex-direction: column;  /* empile input+button et liste verticalement */
+  align-items: center;     /* centre horizontalement */
+}
+
+/* Input + bouton sur la même ligne */
+.input-group {
+  display: flex;
+  gap: 10px;     
+}
+
+/* Input transparent */
+#nameInput {
+  padding: 10px 15px;
+  width: 220px;
+  border-radius: 6px;
+  border: 1px solid #00ABE4;
+  background: transparent;
+  color: #636060;
+  font-family: 'Agraham', sans-serif;
+  font-size: 16px;
+  outline: none;
+  text-align: center;
+}
+
+/* Focus pour input*/
+#nameInput:focus {
+  border-color: #007ea7;
+  box-shadow: 0 0 5px rgba(0, 171, 228, 0.5);
+} 
+
+/* Bouton envoyer */
+#addBtn {
+  padding: 10px 15px;
+  background: #00ABE4;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Agraham', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#addBtn:hover {
+  background: #008bbd;
+}
+
+/* Liste des prénoms */
+#list {
+  margin-top: 20px;
+  width: 300px;
+}
+
+/* Ligne prénom + bouton effacer */
+#list div {
+  background: rgba(0, 171, 228, 0.2);
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Agraham', sans-serif;
+  color: #636060;
+}
+
+/* Bouton effacer */
+#list button {
+  background: #00ABE4;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: 'Agraham', sans-serif;
+
+}
+
+#list button:hover {
+  background: #008bbd;
+}

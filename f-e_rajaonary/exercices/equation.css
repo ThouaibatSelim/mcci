@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Orange Avenue Demo'; /* nom exact que tu veux utiliser */
+  src: url('fonts/orange-avenue-demo/OrangeAvenueDEMO-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Orange Avenue Demo', sans-serif;
+  background: #E9F1FA;
+}
+h1 {
+  font-family: 'Orange Avenue Demo', sans-serif;
+  color: #00ABE4;
+  text-align: center;      /* centre le texte horizontalement */
+
+}
+
+#result {
+  text-align: center;      /* centre le texte horizontalement */
+  margin-top: 20px;        /* espace depuis le haut */
+  font-size: 20px;
+  color: #0b0c0c;
+  font-family: 'Orange Avenue Demo', sans-serif;
+}

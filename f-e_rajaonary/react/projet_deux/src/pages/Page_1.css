@@ -1,0 +1,151 @@
+body { 
+
+ font-family: Arial, sans-serif; 
+
+ background-color: #f0f2f5; 
+
+ display: flex; 
+
+ justify-content: center; 
+
+ padding: 50px; 
+
+} 
+
+ 
+
+.container { 
+
+ background-color: white; 
+
+ padding: 30px; 
+
+ border-radius: 10px; 
+
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+
+ width: 400px; 
+
+} 
+
+ input{
+    background-color: #eee;
+    color: #333;
+
+ }
+
+ ul li {
+    color: #333;
+ }
+
+.titre { 
+
+ text-align: center; 
+
+ color: #333; 
+
+} 
+
+ 
+
+.formulaire { 
+
+ display: flex; 
+
+ margin-bottom: 20px; 
+
+} 
+
+ 
+
+.formulaire input { 
+
+ flex: 1; 
+
+ padding: 10px; 
+
+ border-radius: 5px 0 0 5px; 
+
+ border: 1px solid #ccc; 
+
+ outline: none; 
+
+} 
+
+ 
+
+.formulaire button { 
+
+ padding: 10px 20px; 
+
+ border: none; 
+
+ background-color: #4CAF50; 
+
+ color: white; 
+
+ font-weight: bold; 
+
+ cursor: pointer; 
+
+ border-radius: 0 5px 5px 0; 
+
+} 
+
+ 
+
+.formulaire button:hover { 
+
+ background-color: #45a049; 
+
+} 
+
+ 
+
+.liste { 
+
+ list-style: none; 
+
+ padding: 0; 
+
+} 
+
+ 
+
+.item { 
+
+ display: flex; 
+
+ justify-content: space-between; 
+
+ padding: 10px; 
+
+ border-bottom: 1px solid #eee; 
+
+} 
+
+ 
+
+.supprimer { 
+
+ background-color: #f44336; 
+
+ color: white; 
+
+ border: none; 
+
+ border-radius: 5px; 
+
+ cursor: pointer; 
+
+ padding: 5px 10px; 
+
+} 
+
+ 
+
+.supprimer:hover { 
+
+ background-color: #da190b; 
+
+} 

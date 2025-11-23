@@ -1,23 +1,31 @@
-g// La fonction "route" décide quoi faire pour chaque URL
-function route(pathname, handlers, res, req) {
+﻿// router.js
+
+function route(pathname, handlers, response, request) {
 
     console.log("Router: demande reçue pour " + pathname);
 
-    // Est-ce qu'un handler existe pour cette route ?
-    if (typeof handlers[pathname] === "function") {
+    // Si l'utilisateur va sur "/" on redirige vers "/start"
+    if (pathname === "/") {
+        pathname = "/start";
+    }
 
-        // Oui → on appelle cette fonction
-        handlers[pathname](res, req);
+    // On retire le "/" pour obtenir la clé du handler
+    const handlerKey = pathname.replace("/", "");
+
+    // Vérification si le handler existe
+    if (typeof handlers[handlerKey] === "function") {
+
+        handlers[handlerKey](response, request);
 
     } else {
 
-        // Non → on renvoie une erreur 404
         console.log("Aucun handler trouvé pour " + pathname);
-        res.writeHead(404, { "Content-Type": "text/plain" });
-        res.write("404 Not Found");
-        res.end();
+
+        response.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+        response.write("<h1>404 Page non trouvée</h1>");
+        response.write("<a href='/start'>Retour à l'accueil</a>");
+        response.end();
     }
 }
 
-// On exporte la fonction pour que server.js puisse l’utiliser
 exports.route = route;

@@ -1,22 +1,65 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire</title>
+    <title>Upload</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    height: 100vh;
+    margin: 0;
+
+    /* Centrer le formulaire */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 10px;
+
+    /* box shadow */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+input[type="file"] {
+    margin: 15px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #00ABE4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #008bbd;
+}
+
+    </style>
 </head>
 <body>
-    <style>
-        body { font-family: Arial; margin: 50px; }
-        input, button { margin: 10px 0; padding: 8px; }
-        button { background-color: green; color: white; cursor: pointer; }
-    </style>
+<div class="form-container">
+    <h2>Formulaire</h2>
 
-    <h1>Formulaire Upload</h1>
-    <form method="POST" action="/upload" enctype="multipart/form-data">
-        <label>Nom : <input type="text" name="name" required></label><br>
-        <label>Fichier : <input type="file" name="file" required></label><br>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="">Nom et Prénom:</label>
+        <input type="text" placeholder="Nom et Prénom">
+        <br>
+        <input type="file" name="fichier" required>
+        <br>
         <button type="submit">Envoyer</button>
     </form>
+</div>
+
 </body>
 </html>

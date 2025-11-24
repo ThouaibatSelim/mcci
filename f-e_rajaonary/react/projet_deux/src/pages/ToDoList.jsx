@@ -1,9 +1,10 @@
 import  { useEffect, useState }  from "react";
 import { useNavigate} from 'react-router-dom' ;
-import "./Page_1.css";
+import "../styles/page_1.css";
+import "./Navbar.jsx"
 import './Accueil.jsx'
 
-function Page_1() {
+function ToDoList() {
 const [tache, setTache] = useState("");
 const [liste, setListe] = useState([]);
 
@@ -41,4 +42,4 @@ return(
 );
 }
 
-export default Page_1;
+export default ToDoList;

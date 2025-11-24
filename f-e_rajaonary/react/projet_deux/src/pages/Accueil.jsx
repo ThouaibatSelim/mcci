@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import './Accueil.css';
-import './Page_1.jsx';
+import '../styles/accueil.css';
+import './ToDoList.jsx';
 
 function Accueil() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ function Accueil() {
       
       <button onClick={() => setNombre(0)}>Remettre à zéro</button>
       
-      <button onClick={() => navigate('/Page_1')}>Aller à la to do list</button>
+      <button onClick={() => navigate('/ToDoList')}>Aller à la to do list</button>
     </div>
   );
 }

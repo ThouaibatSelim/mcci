@@ -1,0 +1,35 @@
+
+h1 { 
+
+ color: #333; 
+
+} 
+ 
+
+.valeur { 
+
+ font-size: 1.5rem; 
+
+ padding: 5px; 
+
+ margin: 5px; 
+
+ background: #0070f3; 
+
+ color: white; 
+
+ border: none; 
+
+ border-radius: 5px; 
+
+ cursor: pointer; 
+
+} 
+
+ 
+
+.valeur:hover { 
+
+ background: #005edc; 
+
+} 

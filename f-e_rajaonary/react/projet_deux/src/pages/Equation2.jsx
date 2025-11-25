@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { useNavigate} from 'react-router-dom' ;
+import { useState, useRef } from "react";
+import { useNavigate } from 'react-router-dom';
+import "../styles/equation.css";
 
 function Equation2() {
   const [a, setA] = useState("");
@@ -7,13 +8,17 @@ function Equation2() {
   const [c, setC] = useState("");
   const [result, setResult] = useState("");
   const navigate = useNavigate();
-const reset = () => {
-  setA("");
-  setB("");
-  setResult("");
-};
 
+  // Références pour passer automatiquement au champ suivant
+  const bInputRef = useRef(null);
+  const cInputRef = useRef(null);
 
+  const reset = () => {
+    setA("");
+    setB("");
+    setC("");
+    setResult("");
+  };
 
   const resoudre = () => {
     if (a === "" || b === "" || c === "") {
@@ -35,40 +40,61 @@ const reset = () => {
     }
   };
 
+  const handleAChange = (e) => {
+    setA(e.target.value);
+    if (e.target.value !== "") {
+      bInputRef.current?.focus();
+    }
+  };
+
+  const handleBChange = (e) => {
+    setB(e.target.value);
+    if (e.target.value !== "") {
+      cInputRef.current?.focus();
+    }
+  };
+
   return (
-    <div>
+    <div className="eq-container">
       <h1>Équation de 2nd degré :</h1>
 
       <input
         type="number"
         placeholder="a"
         value={a}
-        onChange={(e) => setA(e.target.value)}
+        onChange={handleAChange}
       />
-<br/> <br/>
+      <br/><br/>
+
       <input
         type="number"
         placeholder="b"
         value={b}
-        onChange={(e) => setB(e.target.value)}
+        ref={bInputRef}
+        onChange={handleBChange}
       />
-<br/> <br/>
+      <br/><br/>
+
       <input
         type="number"
         placeholder="c"
         value={c}
+        ref={cInputRef}
         onChange={(e) => setC(e.target.value)}
       />
-<br/> <br/>
-      <button onClick={resoudre}>Résoudre l'équation</button>
+      <br/><br/>
+
+      <div className="buttons">
+        <button onClick={resoudre}>Résoudre l'équation</button>
+        <button onClick={reset}>Réinitialiser</button>
+      </div>
+
       <br/>
-      <p>{result}</p>
-      <br/> <br/>
-      <button onClick={() => navigate('/eq1')}>Faire un équation de 1er degré</button>
-      <button onClick={reset}>Réinitialiser</button>
+      <p className="eq-result">{result}</p>
 
-
-
+      <button onClick={() => navigate('/eq1')} className="othereq">
+        Faire une équation de 1er degré
+      </button>
     </div>
   );
 }

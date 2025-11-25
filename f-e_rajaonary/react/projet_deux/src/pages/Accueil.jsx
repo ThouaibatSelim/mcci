@@ -1,34 +1,38 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/accueil.css';
-import './ToDoList.jsx';
 
 function Accueil() {
   const navigate = useNavigate();
 
-  const [nombre, setNombre] = useState(0);
-
-    useEffect(() =>
-    console.log ("Bonjour")
-    , []);
-
-    useEffect(() => console.log(nombre), [nombre]);
-
   return (
     <div className="App">
-      <h1>Compteur ultra-simple</h1>
 
-      <h2>Le nombre est : {nombre}</h2>
+      <h2>Choisissez une page</h2>
 
-      <button onClick={() => setNombre(nombre + 1)}>+1</button>
+      <div className="boutons">
+        <button onClick={() => navigate("/compteur")}>
+          Aller au Compteur
+        </button>
 
-      <button onClick={() => setNombre(nombre - 1)}>-1</button>
-      
-      <button onClick={() => setNombre(0)}>Remettre à zéro</button>
-      
-      <button onClick={() => navigate('/ToDoList')}>Aller à la to do list</button>
+        <button onClick={() => navigate("/todolist")}>
+          Aller à la To-Do List
+        </button>
+
+        <button onClick={() => navigate("/eq1")}>
+          Aller à Équation de 1er degré
+        </button>
+
+        <button onClick={() => navigate("/eq2")}>
+          Aller à Équation de 2nd degré
+        </button>
+
+        <button onClick={() => navigate("/input")}>
+          Aller à Input
+        </button>
+      </div>
     </div>
   );
 }
 
 export default Accueil;
+

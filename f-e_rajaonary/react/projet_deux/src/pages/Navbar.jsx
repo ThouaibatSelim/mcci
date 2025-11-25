@@ -7,7 +7,8 @@ function Navbar() {
 
       <ul className="nav-links">
         <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/ToDoList">To Do List</Link></li>
+        <li><Link to="/compteur">Compteur</Link></li>
+        <li><Link to="/toDoList">To Do List</Link></li>
         <li><Link to="/eq1">Équation 1er degré</Link></li>
         <li><Link to="/eq2">Équation 2nd degré</Link></li>
         <li><Link to="/input">Input</Link></li>

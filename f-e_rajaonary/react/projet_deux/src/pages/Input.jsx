@@ -1,20 +1,19 @@
 import { useState, useEffect } from "react";
-import '../styles/input.css'
+import "../styles/input.css";
 
 function Input() {
   const [text, setText] = useState("");
-    const [value, setValue] = useState("");
+
   const reset = () => {
-  setValue("");
-  setResult("");
-};
+    setText("");
+  };
 
   useEffect(() => {
     console.log("Nouvelle valeur :", text);
   }, [text]);
 
   return (
-    <div>
+    <div className="input-container">
       <h1>Input Console</h1>
 
       <input
@@ -24,8 +23,8 @@ function Input() {
         onChange={(e) => setText(e.target.value)}
       />
 
-      <p className="valeur">Valeur entrée : {text}</p>
-      <br/>
+      <p className="valeur">Valeur entrée : {text || "—"}</p>
+
       <button onClick={reset}>Réinitialiser</button>
     </div>
   );

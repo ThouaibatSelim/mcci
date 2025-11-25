@@ -1,10 +1,29 @@
+@font-face {
+  font-family: 'Mont';
+  src: url('/public/fonts/mont/Mont-ExtraLightDEMO.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .navbar {
   background-color: #1e1e1e;
   color: white;
   padding: 15px 30px;
+
+  position: fixed;   /* fixe la navbar au top */
+  top: 0;
+  left: 0;
+  width: 100%;       /* prend toute la page */
+  z-index: 1000;     /* au-dessus du contenu */
+  font-family: 'Mont', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Pour éviter que le contenu passe sous la navbar */
+body {
+  padding-top: 70px;   /* hauteur de la navbar */
 }
 
 .logo {
@@ -21,8 +40,10 @@
   color: white;
   text-decoration: none;
   font-weight: 500;
+  transition: 0.2s;
 }
 
 .nav-links li a:hover {
+  color: #0070f3;      /* option : effet bleu moderne */
   text-decoration: underline;
 }

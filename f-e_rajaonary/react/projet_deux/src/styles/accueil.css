@@ -1,59 +1,47 @@
-.App { 
+@font-face {
+  font-family: 'Mont';
+  src: url('/public/fonts/mont/Mont-ExtraLightDEMO.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
- text-align: center; 
+div .App {
+  text-align: center;
+  padding: 100px;
+  font-family: 'Mont', sans-serif;
+}
 
- padding: 100px; 
 
- font-family: Arial, sans-serif; 
 
-} 
+.App h2 {
+  margin: 40px;
+  color: #0070f3;
+  font-size: 3rem;
+  font-family: 'Mont', sans-serif;
 
- 
+}
 
-h1 { 
+/* Mise en colonne : boutons les uns sous les autres */
+.boutons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
- color: #333; 
+/* Style de tes boutons */
+.boutons button {
+  font-size: 1.5rem;
+  padding: 15px 30px;
+  margin: 10px;
+  background: #0070f3;
+  color: white;
+  font-family: 'Mont', sans-serif;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 300px;        /* même largeur */
+}
 
-} 
-
- 
-
-h2 { 
-
- font-size: 4rem; 
-
- margin: 40px; 
-
- color: #0070f3; 
-
-} 
-
- 
-
-button { 
-
- font-size: 1.5rem; 
-
- padding: 15px 30px; 
-
- margin: 10px; 
-
- background: #0070f3; 
-
- color: white; 
-
- border: none; 
-
- border-radius: 10px; 
-
- cursor: pointer; 
-
-} 
-
- 
-
-button:hover { 
-
- background: #005edc; 
-
-} 
+button:hover {
+  background: #005edc;
+}

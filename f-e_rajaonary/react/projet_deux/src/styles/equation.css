@@ -1,0 +1,97 @@
+@font-face {
+  font-family: 'Mont';
+  src: url('/public/fonts/mont/Mont-ExtraLightDEMO.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.eq-container {
+  width: 400px;
+  margin: 60px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: 'Mont', sans-serif;
+}
+
+/* ===== TITRE ===== */
+.eq-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ===== INPUTS ===== */
+.eq-container input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 1rem;
+  font-family: 'Mont', sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.eq-container input:focus {
+  border-color: #0070f3;
+}
+
+/* ===== BOUTON ===== */
+.buttons {
+  display: flex;
+  gap: 15px;       /* espace entre les deux boutons */
+  justify-content: center;   /* centrer horizontalement */
+  margin-top: 15px;
+}
+
+.buttons button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #0070f3;
+  font-family: 'Mont', sans-serif;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.buttons button:hover {
+  background: #005edc;
+}
+
+.buttons button:active {
+  transform: scale(0.9);
+}
+
+/* ===== RESULTAT ===== */
+.eq-result {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color:#0070f3;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.othereq{
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  background: #0070f3;
+  color: white;
+  font-family: 'Mont', sans-serif;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.othereq:hover {
+  background: #005edc;
+}
+
+.othereq:active {
+  transform: scale(0.9);
+}

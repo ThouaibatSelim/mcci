@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'Mont';
+  src: url('/public/fonts/mont/Mont-ExtraLightDEMO.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ====== CONTAINER GLOBAL ====== */
+.container {
+  width: 350px;
+  margin: 60px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: 'Mont', sans-serif;
+}
+
+/* ====== TITRE ====== */
+.titre {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ====== INPUT ====== */
+.todo-input {
+  width: 90%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Mont', sans-serif;
+  outline: none;
+  transition: border 0.2s ease-in-out;
+}
+
+.todo-input:focus {
+  border-color: #0070f3;
+}
+
+/* ====== BOUTONS SOUS L’INPUT ====== */
+.btn-group {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+}
+
+.btn-small {
+  padding: 8px 16px;
+  background: #0070f3;
+  color: white;
+  border: none;
+  font-family: 'Mont', sans-serif;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn-small:hover {
+  background: #005edc;
+}
+
+.btn-small:active {
+  transform: scale(0.9);
+}
+
+/* ====== LISTE ====== */
+.liste {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+/* ====== BOUTON SUPPRIMER ====== */
+.supprimer {
+  background: #e63946;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.supprimer:hover {
+  background: #c62832;
+}
+
+.supprimer:active {
+  transform: scale(0.9);
+}
+
+/* ====== BOUTON RETOUR ====== */
+.retour {
+  background: #0070f3;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-family: 'Mont', sans-serif;
+  font-size: 0.9rem;
+}
+
+.retour:hover {
+  text-decoration: underline;
+}

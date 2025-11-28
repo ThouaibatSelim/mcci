@@ -25,5 +25,5 @@ function start() {
     console.log("Serveur lancé sur le port http://localhost:8882/.");
 }
 
-// On exporte la fonction start pour l'utiliser ailleurs
+// Export de la fonction start
 exports.start = start;
